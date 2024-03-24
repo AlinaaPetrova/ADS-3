@@ -5,23 +5,21 @@ int cbinsearch(int *arr, int size, int value) {
     int lowg = 0;
     int highg = size-1;
 
-    while (lowg <= highg){
+    while (lowg <= highg) {
         int mid = (lowg+highg)/2;
-        if (arr[mid] < value){
+        if (arr[mid] < value) {
             lowg = mid + 1;
-        }
-        else if (arr [mid] > value){
+        } else if (arr[mid] > value) {
             highg = mid-1;
-        }
-        else{
+        } else {
             count++;
             int arg1 = mid-1;
             mid++;
-            while (arr[mid]==value){
+            while (arr[mid] == value) {
                 count++;
                 mid++;
             }
-            while(arr[arg1]==value){
+            while (arr[arg1] == value) {
                 count++;
                 arg1--;
             }
